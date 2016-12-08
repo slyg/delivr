@@ -1,0 +1,14 @@
+image: node:6.9.2
+
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - npm install -g yarn
+    - yarn
+    - npm run build || true
+  artifacts:
+    paths:
+      - build/

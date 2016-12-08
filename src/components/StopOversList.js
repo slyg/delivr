@@ -17,18 +17,23 @@ const ClearIcon = (props) => {
   )
 };
 
-const StopOversList = ({stopOvers, removeStopOver}) => (
-  <Stepper activeStep={-1} orientation="vertical" linear={false} style={{paddingBottom: "1rem"}}>
-    {stopOvers.map(
-      (item, i) =>
-        <Step key={i}>
-          <StepLabel>
-            {item.label}
-            <ClearIcon onClick={() => removeStopOver(i)} />
-          </StepLabel>
-        </Step>
-    )}
-  </Stepper>
-);
+const StopOversList = ({stopOvers, removeStopOver}) => {
+  if (stopOvers.length === 0) {
+    return null
+  }
+  return (
+    <Stepper activeStep={-1} orientation="vertical" linear={false} style={{paddingBottom: "1rem"}}>
+      {stopOvers.map(
+        (item, i) =>
+          <Step key={i}>
+            <StepLabel>
+              {item.label}
+              <ClearIcon onClick={() => removeStopOver(i)} />
+            </StepLabel>
+          </Step>
+      )}
+    </Stepper>
+  )
+}
 
 export default StopOversList

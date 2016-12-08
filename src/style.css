@@ -7,3 +7,16 @@ body {
   padding: 1rem;
   margin: 1rem;
 }
+
+.control-panel {
+  position: relative;
+  z-index: 2;
+  width: 500px;
+}
+
+.map {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+}

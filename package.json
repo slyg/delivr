@@ -6,6 +6,7 @@
     "react-scripts": "0.8.1"
   },
   "dependencies": {
+    "mapbox-gl": "^0.28.0",
     "material-ui": "^0.16.4",
     "ramda": "^0.22.1",
     "react": "^15.4.1",

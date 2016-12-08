@@ -3,7 +3,8 @@ import {
   SEARCH_INPUT_UPDATE,
   SEARCH_INPUT_SUGGESTIONS_UPDATE,
   ADD_STEP,
-  ADD_STEP_WITH_ID
+  ADD_STEP_WITH_ID,
+  MAP_MOUNTED
 } from './actionTypes'
 
 export const removeStopOver = (index) => ({
@@ -31,4 +32,9 @@ export const addStepWithId = (value, id) => ({
   type: ADD_STEP_WITH_ID,
   id,
   value
+})
+
+export const mapMounted = (ref) => ({
+  type: MAP_MOUNTED,
+  ref
 })

@@ -4,14 +4,18 @@ import Paper from 'material-ui/Paper'
 import DividerContainer from './DividerContainer'
 import StopOversListContainer from './StopOversListContainer'
 import SearchContainer from './SearchContainer'
+import MapContainer from './MapContainer'
 
 const Layout = () => (
   <MuiThemeProvider>
-    <Paper className='standard-spacing' zDepth={1} rounded={false}>
-      <StopOversListContainer />
-      <DividerContainer />
-      <SearchContainer />
-    </Paper>
+    <div>
+      <Paper className='standard-spacing control-panel' zDepth={1} rounded={false}>
+        <StopOversListContainer />
+        <DividerContainer />
+        <SearchContainer />
+      </Paper>
+      <MapContainer />
+    </div>
   </MuiThemeProvider>
 )
 

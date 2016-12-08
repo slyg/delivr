@@ -17,14 +17,14 @@ const ClearIcon = (props) => {
   )
 };
 
-const StopOversList = ({items}) => (
+const StopOversList = ({stopOvers, removeStopOver}) => (
   <Stepper activeStep={-1} orientation="vertical" linear={false} style={{paddingBottom: "1rem"}}>
-    {items.map(
+    {stopOvers.map(
       (item, i) =>
         <Step key={i}>
           <StepLabel>
             {item.label}
-            <ClearIcon />
+            <ClearIcon onClick={() => removeStopOver(i)} />
           </StepLabel>
         </Step>
     )}

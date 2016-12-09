@@ -28,10 +28,11 @@ export const addStep = (value, index) => ({
   value
 })
 
-export const addStepWithId = (value, id) => ({
+export const addStepWithCoordinates = (label, id, coordinates) => ({
   type: ADD_STEP_WITH_ID,
+  coordinates,
   id,
-  value
+  label
 })
 
 export const mapMounted = (ref) => ({

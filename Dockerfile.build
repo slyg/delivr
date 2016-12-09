@@ -1,0 +1,17 @@
+FROM node:6.9.2
+
+ENV WORKSPACE /web
+WORKDIR $WORKSPACE
+
+RUN npm install -g yarn
+
+# Npm dependencies layer
+ADD package.json /tmp/package.json
+ADD yarn.lock /tmp/yarn.lock
+RUN cd /tmp && yarn
+RUN mkdir -p $WORKSPACE \
+ && cp -a /tmp/node_modules $WORKSPACE/
+
+ADD . $WORKSPACE
+
+ENTRYPOINT npm run build

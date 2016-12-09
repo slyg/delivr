@@ -1,9 +1,9 @@
 import autocomplete from './autocomplete'
-import addStepWithId from './addStepWithId'
 import mapController from './mapController'
+import selectedStepHydratation from './selectedStepHydratation'
 
 export default [
   autocomplete,
-  addStepWithId,
-  mapController
+  mapController,
+  selectedStepHydratation
 ]

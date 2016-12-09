@@ -1,14 +1,30 @@
-image: node:6.9.2
+image: docker:latest
+services:
+- docker:dind
+
+variables:
+  CONTAINER_BUILD_REGISTRY: registry.gitlab.com/syl.faucherand/delivr-build
+  CONTAINER_BUILD_IMAGE: $CONTAINER_BUILD_REGISTRY:$CI_BUILD_REF_NAME
+  CONTAINER_STAGING_REGISTRY: registry.gitlab.com/syl.faucherand/delivr-staging
+  CONTAINER_STAGING_IMAGE: $CONTAINER_STAGING_REGISTRY:$CI_BUILD_REF_NAME
 
 stages:
-  - build
+- build
+- release
 
 build:
   stage: build
   script:
-    - npm install -g yarn
-    - yarn
-    - npm run build
-  artifacts:
-    paths:
-      - build/
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CONTAINER_BUILD_REGISTRY
+    - docker build --pull -t $CONTAINER_BUILD_IMAGE -f ./Dockerfile.build .
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CONTAINER_BUILD_REGISTRY
+    - docker push $CONTAINER_BUILD_IMAGE
+
+release:
+  stage: release
+  script:
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN CONTAINER_BUILD_REGISTRY
+    - docker pull $CONTAINER_BUILD_IMAGE
+    - docker run -v $(pwd)/build:/web/build $CONTAINER_BUILD_IMAGE
+    - docker build -t $CONTAINER_STAGING_IMAGE .
+    - docker push $CONTAINER_STAGING_IMAGE

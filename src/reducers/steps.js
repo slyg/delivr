@@ -1,13 +1,13 @@
-import { REMOVE_STOPOVER, ADD_STEP_WITH_ID } from '../actionTypes'
+import { REMOVE_STEP, ADD_STEP_WITH_COORDINATES } from '../actionTypes'
 
 const initialState = []
 
 // state : [{ label: String }]
-const stopOvers = (state = initialState, action) => {
+const steps = (state = initialState, action) => {
   switch (action.type) {
-    case REMOVE_STOPOVER:
+    case REMOVE_STEP:
       return state.filter((_, i) => i !== action.index)
-    case ADD_STEP_WITH_ID: {
+    case ADD_STEP_WITH_COORDINATES: {
       const { label, id, coordinates } = action
       return [...state, { label, id, coordinates }]
     }
@@ -17,4 +17,4 @@ const stopOvers = (state = initialState, action) => {
 
 }
 
-export default stopOvers
+export default steps

@@ -9,8 +9,8 @@ const DividerContainer = ({isDisplayed}) => {
   return <div />
 }
 
-const mapStateToProps = ({stopOvers, isSearchDisplayed}) => ({
-  isDisplayed: (stopOvers.length > 0) && (stopOvers.length <= 4)
+const mapStateToProps = ({steps, isSearchDisplayed}) => ({
+  isDisplayed: (steps.length > 0) && (steps.length <= 4)
 })
 
 export default connect(mapStateToProps)(DividerContainer)

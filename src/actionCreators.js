@@ -1,14 +1,15 @@
 import {
-  REMOVE_STOPOVER,
+  REMOVE_STEP,
   SEARCH_INPUT_UPDATE,
   SEARCH_INPUT_SUGGESTIONS_UPDATE,
   ADD_STEP,
-  ADD_STEP_WITH_ID,
-  MAP_MOUNTED
+  ADD_STEP_WITH_COORDINATES,
+  MAP_MOUNTED,
+  NEW_ROUTE
 } from './actionTypes'
 
 export const removeStopOver = (index) => ({
-  type: REMOVE_STOPOVER,
+  type: REMOVE_STEP,
   index
 })
 
@@ -29,7 +30,7 @@ export const addStep = (value, index) => ({
 })
 
 export const addStepWithCoordinates = (label, id, coordinates) => ({
-  type: ADD_STEP_WITH_ID,
+  type: ADD_STEP_WITH_COORDINATES,
   coordinates,
   id,
   label
@@ -38,4 +39,9 @@ export const addStepWithCoordinates = (label, id, coordinates) => ({
 export const mapMounted = (ref) => ({
   type: MAP_MOUNTED,
   ref
+})
+
+export const newRoute = (route) => ({
+  type: NEW_ROUTE,
+  route
 })

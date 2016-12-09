@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
-import stopOvers from './stopOvers'
-import stopOversSuggestions from './stopOversSuggestions'
+import steps from './steps'
+import suggestions from './suggestions'
 
 const reducers = combineReducers({
-  stopOvers,
-  stopOversSuggestions,
+  steps,
+  suggestions,
 })
 
 export default reducers

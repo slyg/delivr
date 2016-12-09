@@ -4,7 +4,7 @@ import { searchInputSuggestionsUpdate } from '../actionCreators'
 import { memoize } from 'ramda'
 
 const fetchSuggestions = memoize(
-  (value) =>
+  value =>
     fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${value}.json?access_token=${ACCESS_TOKEN}`)
       .then(r => r.json())
       .then(r => r.features)

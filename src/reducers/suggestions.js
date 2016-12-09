@@ -3,7 +3,7 @@ import { SEARCH_INPUT_SUGGESTIONS_UPDATE } from '../actionTypes'
 const initialState = []
 
 // state: [String]
-const stopOversSuggestions = (state = initialState, action) => {
+const suggestions = (state = initialState, action) => {
   switch (action.type) {
     case SEARCH_INPUT_SUGGESTIONS_UPDATE:
       return action.suggestions
@@ -13,4 +13,4 @@ const stopOversSuggestions = (state = initialState, action) => {
 
 }
 
-export default stopOversSuggestions
+export default suggestions

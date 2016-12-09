@@ -3,9 +3,9 @@ import { searchInputUpdate, addStep } from '../actionCreators'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-const mapStateToProps = ({stopOversSuggestions, stopOvers}) => ({
-  suggestions: stopOversSuggestions.map(({place_name}) => place_name),
-  isDisplayed: (stopOvers.length < 4) || (stopOvers.length === 0)
+const mapStateToProps = ({suggestions, steps}) => ({
+  suggestions: suggestions.map(({place_name}) => place_name),
+  isDisplayed: (steps.length < 4) || (steps.length === 0)
 })
 const mapDispatchToProps = dispatch => bindActionCreators({ searchInputUpdate, addStep }, dispatch)
 

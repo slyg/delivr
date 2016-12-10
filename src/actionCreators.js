@@ -4,7 +4,6 @@ import {
   SEARCH_INPUT_SUGGESTIONS_UPDATE,
   ADD_STEP,
   ADD_STEP_WITH_COORDINATES,
-  MAP_MOUNTED,
   NEW_ROUTE
 } from './actionTypes'
 
@@ -34,11 +33,6 @@ export const addStepWithCoordinates = (label, id, coordinates) => ({
   coordinates,
   id,
   label
-})
-
-export const mapMounted = (ref) => ({
-  type: MAP_MOUNTED,
-  ref
 })
 
 export const newRoute = (route) => ({

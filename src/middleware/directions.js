@@ -1,11 +1,11 @@
 import { ADD_STEP_WITH_COORDINATES, REMOVE_STEP } from '../actionTypes'
-import { ACCESS_TOKEN } from '../conf'
+import { ACCESS_TOKEN, API_HOST, API_VERSION } from '../conf'
 import { newRoute } from '../actionCreators'
 import { memoize, compose, prop, map, join } from 'ramda'
 
 const fetchNewRoute = memoize(
   coordinates =>
-    fetch(`https://api.mapbox.com/directions/v5/mapbox/driving/${encodeURIComponent(coordinates)}.json?access_token=${ACCESS_TOKEN}&geometries=geojson`)
+    fetch(`${API_HOST}/directions/${API_VERSION}/mapbox/driving/${encodeURIComponent(coordinates)}.json?access_token=${ACCESS_TOKEN}&geometries=geojson`)
       .then(r => r.json())
       .then(r => r.routes[0])
 )

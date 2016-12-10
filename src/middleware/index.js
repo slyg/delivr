@@ -1,11 +1,11 @@
 import autocomplete from './autocomplete'
-import mapController from './mapController'
-import selectedStepHydratation from './selectedStepHydratation'
-import directionController from './directionController'
+import mapbox from './mapbox'
+import stepHydration from './stepHydration'
+import directions from './directions'
 
 export default [
   autocomplete,
-  mapController,
-  selectedStepHydratation,
-  directionController
+  mapbox,
+  stepHydration,
+  directions
 ]

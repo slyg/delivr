@@ -5,9 +5,9 @@ import { addStepWithCoordinates } from '../actionCreators'
 // by cherry-picking the item's id in the suggestions
 export default store => next => action => {
 
-  const { type } = action
-
   next(action)
+  
+  const { type } = action
 
   if (type === ADD_STEP) {
     const { index, value } = action

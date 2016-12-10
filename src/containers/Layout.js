@@ -1,6 +1,6 @@
 import React from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import Paper from 'material-ui/Paper'
+import Drawer from 'material-ui/Drawer'
 import DividerContainer from './DividerContainer'
 import StepsContainer from './StepsContainer'
 import SearchContainer from './SearchContainer'
@@ -9,11 +9,11 @@ import MapContainer from './MapContainer'
 const Layout = () => (
   <MuiThemeProvider>
     <div>
-      <Paper className='standard-spacing control-panel' zDepth={1} rounded={false}>
+      <Drawer className='standard-spacing control-panel' width={400}>
         <StepsContainer />
         <DividerContainer />
         <SearchContainer />
-      </Paper>
+      </Drawer>
       <MapContainer />
     </div>
   </MuiThemeProvider>

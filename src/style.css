@@ -8,6 +8,10 @@ body {
   margin: 1rem;
 }
 
+.info-color {
+  color: #ccc;
+}
+
 .control-panel {
   position: relative;
   z-index: 2;

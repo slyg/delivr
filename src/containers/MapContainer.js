@@ -78,7 +78,7 @@ class MapContainer extends Component {
 
       this.map
         .fitBounds(bounds, {
-          offset: [250, 0],
+          offset: [200, 0],
           padding: 100
         })
 

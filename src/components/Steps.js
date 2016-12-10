@@ -1,10 +1,11 @@
-import React from 'react';
+import React from 'react'
 import {
   Step,
   Stepper,
   StepLabel,
-} from 'material-ui/Stepper';
-import SvgIcon from 'material-ui/SvgIcon';
+} from 'material-ui/Stepper'
+import Subheader from 'material-ui/Subheader'
+import SvgIcon from 'material-ui/SvgIcon'
 
 const ClearIcon = (props) => {
   return (
@@ -15,24 +16,27 @@ const ClearIcon = (props) => {
       </SvgIcon>
     </span>
   )
-};
+}
 
 const Steps = ({steps, removeStopOver}) => {
   if (steps.length === 0) {
     return null
   }
   return (
-    <Stepper activeStep={-1} orientation="vertical" linear={false} style={{paddingBottom: "1rem"}}>
-      {steps.map(
-        (item, i) =>
-          <Step key={i}>
-            <StepLabel>
-              {item.label}
-              <ClearIcon onClick={() => removeStopOver(i)} />
-            </StepLabel>
-          </Step>
-      )}
-    </Stepper>
+    <div>
+      <Subheader>Your trip</Subheader>
+      <Stepper activeStep={-1} orientation="vertical" linear={false} style={{paddingBottom: "1rem"}}>
+        {steps.map(
+          (item, i) =>
+            <Step key={i}>
+              <StepLabel>
+                {item.label}
+                <ClearIcon onClick={() => removeStopOver(i)} />
+              </StepLabel>
+            </Step>
+        )}
+      </Stepper>
+    </div>
   )
 }
 

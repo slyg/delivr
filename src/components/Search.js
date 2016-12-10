@@ -32,7 +32,7 @@ class Search extends Component {
     const { suggestions, isDisplayed } = this.props
 
     if (isDisplayed === false) {
-      return <small>Max number of steps reached</small>
+      return <p className='standard-spacing info-color'><small>Max number of steps reached</small></p>
     }
 
     return (

@@ -15,7 +15,6 @@ body {
 .control-panel {
   position: relative;
   z-index: 2;
-  width: 500px;
 }
 
 .map {
@@ -23,4 +22,5 @@ body {
   height: 100%;
   width: 100%;
   top: 0;
+  right: -200px;
 }

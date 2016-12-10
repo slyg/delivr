@@ -78,8 +78,7 @@ class MapContainer extends Component {
 
       this.map
         .fitBounds(bounds, {
-          offset: [200, 0],
-          padding: 100
+          padding: 250
         })
 
     } else {
@@ -89,7 +88,11 @@ class MapContainer extends Component {
           type: 'FeatureCollection',
           features: []
         })
-        
+
+    }
+
+    if (steps.length === 1) {
+      this.map.panTo(steps[0].coordinates)
     }
 
     this.map.getSource('points').setData({

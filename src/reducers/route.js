@@ -1,4 +1,4 @@
-import { NEW_ROUTE } from '../actionTypes'
+import { NEW_ROUTE, DELETE_ROUTE } from '../actionTypes'
 
 const initialState = {
   exists: false,
@@ -17,6 +17,9 @@ const route = (state = initialState, action) => {
         exists: true,
       }
     }
+
+    case DELETE_ROUTE:
+      return initialState
 
     default:
       return state

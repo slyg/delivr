@@ -82,6 +82,14 @@ class MapContainer extends Component {
           padding: 100
         })
 
+    } else {
+
+      this.map
+        .getSource('route').setData({
+          type: 'FeatureCollection',
+          features: []
+        })
+        
     }
 
     this.map.getSource('points').setData({

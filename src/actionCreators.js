@@ -4,7 +4,8 @@ import {
   SEARCH_INPUT_SUGGESTIONS_UPDATE,
   ADD_STEP,
   ADD_STEP_WITH_COORDINATES,
-  NEW_ROUTE
+  NEW_ROUTE,
+  DELETE_ROUTE
 } from './actionTypes'
 
 export const removeStopOver = (index) => ({
@@ -38,4 +39,8 @@ export const addStepWithCoordinates = (label, id, coordinates) => ({
 export const newRoute = (route) => ({
   type: NEW_ROUTE,
   route
+})
+
+export const deleteRoute = () => ({
+  type: DELETE_ROUTE
 })

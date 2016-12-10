@@ -1,6 +1,6 @@
 import { ADD_STEP_WITH_COORDINATES, REMOVE_STEP } from '../actionTypes'
 import { ACCESS_TOKEN, API_HOST, API_VERSION } from '../conf'
-import { newRoute } from '../actionCreators'
+import { newRoute, deleteRoute } from '../actionCreators'
 import { memoize, compose, prop, map, join } from 'ramda'
 
 const fetchNewRoute = memoize(
@@ -38,6 +38,11 @@ export default store => next => action => {
             store.dispatch(newRoute(route))
         )
         .catch(({message, stack}) => console.error('Woops', message, stack))
+
+    } else {
+
+      store.dispatch(deleteRoute())
+
     }
 
   }

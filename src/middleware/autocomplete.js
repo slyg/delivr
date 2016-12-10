@@ -5,7 +5,7 @@ import { memoize } from 'ramda'
 
 const fetchSuggestions = memoize(
   value =>
-    fetch(`${API_HOST}/geocoding/${API_VERSION}/mapbox.places/${value}.json?access_token=${ACCESS_TOKEN}`)
+    fetch(`${API_HOST}/geocoding/${API_VERSION}/mapbox.places/${value}.json?country=gb&access_token=${ACCESS_TOKEN}`)
       .then(r => r.json())
       .then(r => r.features)
 )
@@ -27,5 +27,5 @@ export default store => next => action => {
   }
 
   next(action)
-  
+
 }

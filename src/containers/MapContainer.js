@@ -18,25 +18,6 @@ class MapContainer extends Component {
 
     this.map.on('load', () => {
       this.map
-        .addSource('points', {
-          type: 'geojson',
-          data: {
-            type: 'FeatureCollection',
-            features: []
-          }
-        })
-        .addLayer({
-          id: 'points',
-          type: 'symbol',
-          source: 'points',
-          layout: {
-            'icon-image': 'marker-11',
-            'text-field': '{label}',
-            // 'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 0.6],
-            'text-anchor': 'top'
-          }
-        })
         .addSource('route', {
           type: 'geojson',
           data: {
@@ -55,6 +36,24 @@ class MapContainer extends Component {
           paint: {
             'line-color': '#088',
             'line-width': 8
+          }
+        })
+        .addSource('points', {
+          type: 'geojson',
+          data: {
+            type: 'FeatureCollection',
+            features: []
+          }
+        })
+        .addLayer({
+          id: 'points',
+          type: 'symbol',
+          source: 'points',
+          layout: {
+            'icon-image': 'marker-15',
+            // 'text-field': '{label}',
+            'text-offset': [0, 0.6],
+            'text-anchor': 'top'
           }
         })
     })

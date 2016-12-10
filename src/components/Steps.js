@@ -17,7 +17,7 @@ const ClearIcon = (props) => {
   )
 };
 
-const StopOversList = ({steps, removeStopOver}) => {
+const Steps = ({steps, removeStopOver}) => {
   if (steps.length === 0) {
     return null
   }
@@ -36,4 +36,4 @@ const StopOversList = ({steps, removeStopOver}) => {
   )
 }
 
-export default StopOversList
+export default Steps

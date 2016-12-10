@@ -13,7 +13,7 @@ class MapContainer extends Component {
       container: this.ref,
       style: 'mapbox://styles/mapbox/streets-v8',
       zoom: 8,
-      center: [-0.118092, 51.509865],
+      center: [-0.118092, 51.509865], // London
     })
 
     this.map.on('load', () => {

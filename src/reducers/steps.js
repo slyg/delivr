@@ -8,8 +8,8 @@ const steps = (state = initialState, action) => {
     case REMOVE_STEP:
       return state.filter((_, i) => i !== action.index)
     case ADD_STEP_WITH_COORDINATES: {
-      const { label, id, coordinates } = action
-      return [...state, { label, id, coordinates }]
+      const { label, coordinates } = action
+      return [...state, { label, coordinates }]
     }
     default:
       return state

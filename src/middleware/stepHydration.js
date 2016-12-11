@@ -6,7 +6,7 @@ import { addStepWithCoordinates } from '../actionCreators'
 export default store => next => action => {
 
   next(action)
-  
+
   const { type } = action
 
   if (type === ADD_STEP) {

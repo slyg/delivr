@@ -4,6 +4,7 @@ import Drawer from 'material-ui/Drawer'
 import StepsContainer from './StepsContainer'
 import SearchContainer from './SearchContainer'
 import MapContainer from './MapContainer'
+import EtaContainer from './EtaContainer'
 
 const Layout = () => (
   <MuiThemeProvider>
@@ -12,6 +13,9 @@ const Layout = () => (
         <StepsContainer />
         <div className='standard-spacing'>
           <SearchContainer />
+        </div>
+        <div className='standard-spacing'>
+          <EtaContainer />
         </div>
       </Drawer>
       <MapContainer />

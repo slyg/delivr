@@ -47,6 +47,7 @@
     "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
+    "date-fns": "^1.17.0",
     "mapbox-gl": "^0.28.0",
     "material-ui": "^0.16.4",
     "ramda": "^0.22.1",

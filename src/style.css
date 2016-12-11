@@ -9,12 +9,7 @@ body {
 }
 
 .info-color {
-  color: #ccc;
-}
-
-.control-panel {
-  position: relative;
-  z-index: 2;
+  color: #bbb;
 }
 
 .map {

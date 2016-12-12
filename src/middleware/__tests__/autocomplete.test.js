@@ -16,15 +16,15 @@ describe('The autocomplete middleware', () => {
       )
   )
 
-  it('should pass any dummy action', (done) => {
+  it('should pass any dummy action', done => {
     middleware({})(done)(dummyAction)
   })
 
-  it('should pass SEARCH_INPUT_UPDATE action with value length lt 2', (done) => {
+  it('should pass SEARCH_INPUT_UPDATE action with value length lt 2', done => {
     middleware({})(done)({ type: SEARCH_INPUT_UPDATE, value: [1, 2] })
   })
 
-  it('should pass dispatch on SEARCH_INPUT_UPDATE action with value length gt 2', (done) => {
+  it('should pass dispatch on SEARCH_INPUT_UPDATE action with value length gt 2', done => {
 
     const nextMock = () => {}
     const actionMock = { type: SEARCH_INPUT_UPDATE, value: [1, 2, 3] }
@@ -35,7 +35,7 @@ describe('The autocomplete middleware', () => {
         return done()
       }
     })(nextMock)(actionMock)
-    
+
   })
 
 })

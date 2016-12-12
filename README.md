@@ -3,6 +3,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
+## Tada
+
+- use backend proxy for api calls (hides token)
+- more tests (unit / e2e)
+- add departure time
+- handle mobile devices
+- fix CI (docker build image is too big and makes docker authentication token expire before image is actually built)
+- optimize MapContainer rendering strategy (smart diff ?)
+- host project somewhere (google firebase to handle ssl xhr calls)
+
 ## Table of Contents
 
 - [Updating to New Releases](#updating-to-new-releases)
@@ -900,13 +910,13 @@ This feature is experimental and still [has major usage issues](https://github.c
 
 ### Editor Integration
 
-If you use [Visual Studio Code](https://code.visualstudio.com), there is a [Jest extension](https://github.com/orta/vscode-jest) which works with Create React App out of the box. This provides a lot of IDE-like features while using a text editor: showing the status of a test run with potential fail messages inline, starting and stopping the watcher automatically, and offering one-click snapshot updates. 
+If you use [Visual Studio Code](https://code.visualstudio.com), there is a [Jest extension](https://github.com/orta/vscode-jest) which works with Create React App out of the box. This provides a lot of IDE-like features while using a text editor: showing the status of a test run with potential fail messages inline, starting and stopping the watcher automatically, and offering one-click snapshot updates.
 
 ![VS Code Jest Preview](https://cloud.githubusercontent.com/assets/49038/20795349/a032308a-b7c8-11e6-9b34-7eeac781003f.png)
 
 ## Developing Components in Isolation
 
-Usually, in an app, you have a lot of UI components, and each of them has many different states. 
+Usually, in an app, you have a lot of UI components, and each of them has many different states.
 For an example, a simple button component could have following states:
 
 * With a text label.

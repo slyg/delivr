@@ -9,20 +9,20 @@ variables:
   CONTAINER_PRODUTION_IMAGE: $CONTAINER_PRODUTION_REGISTRY/delivr:latest
 
 stages:
-- build
+# - build
 - release
 
-build:
-  stage: build
-  script:
-    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CONTAINER_BUILD_REGISTRY
-    - docker build --pull -t $CONTAINER_BUILD_IMAGE -f ./Dockerfile.build .
-    - docker push $CONTAINER_BUILD_IMAGE
+# build:
+#   stage: build
+#   script:
+#     - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CONTAINER_BUILD_REGISTRY
+#     - docker build --pull -t $CONTAINER_BUILD_IMAGE -f ./Dockerfile.build .
+#     - docker push $CONTAINER_BUILD_IMAGE
 
 release:
   stage: release
   script:
-    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN CONTAINER_BUILD_REGISTRY
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CONTAINER_BUILD_REGISTRY
     - docker pull $CONTAINER_BUILD_IMAGE
     - docker run -v $(pwd)/build:/web/build $CONTAINER_BUILD_IMAGE
     - docker build -t $CONTAINER_PRODUTION_IMAGE .

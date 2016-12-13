@@ -1,0 +1,5 @@
+delivr-build:
+  build: .
+  dockerfile: Dockerfile.build
+  volumes:
+    - ./build:/web/build

@@ -1,0 +1,4 @@
+delivr-app:
+  build: .
+  ports:
+    - 9000:80

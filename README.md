@@ -46,6 +46,7 @@ $ npm test
 
 ## Tada
 
+- Handle net errors
 - More tests, e.g. ui components w/ enzyme, other unit tests, e2e tests
 - Add some static typing annotations/validations, e.g. using flow
 - Handle cross-browsers issues

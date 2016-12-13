@@ -1,4 +1,4 @@
-import { TICK, REQUEST_NEW_DEPARTURE_TIME } from '../actionTypes'
+import { REQUEST_NEW_DEPARTURE_TIME } from '../actionTypes'
 
 export const NOW = 'NOW'
 export const LATER = 'LATER'
@@ -15,18 +15,6 @@ const initialState = {
 
 const route = (state = initialState, action) => {
   switch (action.type) {
-
-    case TICK: {
-      const { date } = action
-      if (state.kind === NOW) {
-        return {
-          ...state,
-          date
-        }
-      } else {
-        return state;
-      }
-    }
 
     case REQUEST_NEW_DEPARTURE_TIME: {
       const { date, kind } = action

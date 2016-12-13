@@ -51,46 +51,4 @@ describe('The departure reducer', () => {
 
   })
 
-  it('should update date value on TICK action when kind was previously NOW', () => {
-
-    const step0 = departureReducer(undefined, dummyAction)
-    const step1 = departureReducer(step0, {
-      type: REQUEST_NEW_DEPARTURE_TIME,
-      date: 1,
-      kind: NOW
-    })
-    const step2 = departureReducer(step1, {
-      type: TICK,
-      date: 3
-    })
-
-    expect(step2).toEqual({
-      ...staticValues,
-      date: 3,
-      kind: NOW
-    })
-
-  })
-
-  it('should not update date value on TICK action when kind was previously LATER', () => {
-
-    const step0 = departureReducer(undefined, dummyAction)
-    const step1 = departureReducer(step0, {
-      type: REQUEST_NEW_DEPARTURE_TIME,
-      date: 1,
-      kind: LATER
-    })
-    const step2 = departureReducer(step1, {
-      type: TICK,
-      date: 3
-    })
-
-    expect(step2).toEqual({
-      ...staticValues,
-      date: 1,
-      kind: LATER
-    })
-
-  })
-
 })

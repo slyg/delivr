@@ -6,7 +6,6 @@ import {
   ADD_STEP_WITH_COORDINATES,
   NEW_ROUTE,
   DELETE_ROUTE,
-  TICK,
   REQUEST_NEW_DEPARTURE_TIME
 } from './actionTypes'
 
@@ -45,11 +44,6 @@ export const newRoute = (route) => ({
 
 export const deleteRoute = () => ({
   type: DELETE_ROUTE
-})
-
-export const tick = (date) => ({
-  type: TICK,
-  date
 })
 
 export const requestNewDepartureTime = (kind, date) => ({

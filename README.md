@@ -46,12 +46,12 @@ $ npm test
 
 ## Tada
 
-- Add departure time
-- Use backend proxy for api calls (hides token)
-- More tests (unit / e2e)
+- More tests, e.g. ui components w/ enzyme, other unit tests, e2e tests
+- Add some static typing annotations/validations, e.g. using flow
 - Handle cross-browsers issues
 - Handle mobile devices
+- Use backend proxy for api calls (hides token)
 - Fix CI (docker build image is too big and makes docker authentication token expire before image is actually built)
 - Optimize `<MapContainer />` rendering strategy (smart diff ?)
-- Host project somewhere
-- Prune dependencies
+- Host project somewhere, e.g. on surge.sh
+- Cleanup dependencies

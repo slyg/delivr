@@ -5,7 +5,7 @@ import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js'
 
 mapboxgl.accessToken = ACCESS_TOKEN
 
-class MapContainer extends Component {
+class MapWrapper extends Component {
 
   componentDidMount () {
 
@@ -121,4 +121,4 @@ class MapContainer extends Component {
 
 const mapStateToProps = ({route, steps}) => ({route, steps})
 
-export default connect(mapStateToProps)(MapContainer)
+export default connect(mapStateToProps)(MapWrapper)

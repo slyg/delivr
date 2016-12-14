@@ -48,6 +48,7 @@
   },
   "dependencies": {
     "date-fns": "^1.17.0",
+    "flow-bin": "^0.37.0",
     "mapbox-gl": "^0.28.0",
     "material-ui": "^0.16.4",
     "ramda": "^0.22.1",
@@ -60,7 +61,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "./node_modules/.bin/flow && node scripts/test.js --env=jsdom"
   },
   "jest": {
     "collectCoverageFrom": [

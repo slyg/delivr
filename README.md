@@ -48,7 +48,6 @@ $ npm test
 
 - Handle net errors
 - More tests, e.g. ui components w/ enzyme, other unit tests, e2e tests
-- Add some static typing annotations/validations, e.g. using flow
 - Handle cross-browsers issues
 - Handle mobile devices
 - Use backend proxy for api calls (hides token)

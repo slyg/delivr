@@ -1,0 +1,5 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/fbjs/.*
+<PROJECT_ROOT>/node_modules/jsonlint-lines-primitives/.*
+<PROJECT_ROOT>/node_modules/mapbox-gl-style-spec/.*
+<PROJECT_ROOT>/node_modules/unflowify/.*

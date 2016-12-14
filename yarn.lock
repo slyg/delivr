@@ -2302,6 +2302,10 @@ flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
 
+flow-bin:
+  version "0.37.0"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.37.0.tgz#456ebbd472d20d2d970560cea0a6b3c648878307"
+
 flow-remove-types@^1.0.0, flow-remove-types@^1.0.4:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/flow-remove-types/-/flow-remove-types-1.1.0.tgz#50e10497d7b153a4b60a4040116ad276d8ad05bd"

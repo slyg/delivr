@@ -1,7 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import AutoComplete from 'material-ui/AutoComplete'
 
+const { arrayOf, string, func, bool } = PropTypes
+
 class Search extends Component {
+
+  static propTypes = {
+    searchInputUpdate: func.isRequired,
+    addStep: func.isRequired,
+    suggestions: arrayOf(string.isRequired),
+    isDisplayed: bool.isRequired
+  }
 
   constructor (props) {
     super(props)

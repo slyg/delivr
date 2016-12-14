@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import {
   Step,
   Stepper,
@@ -6,6 +6,8 @@ import {
 } from 'material-ui/Stepper'
 import Subheader from 'material-ui/Subheader'
 import SvgIcon from 'material-ui/SvgIcon'
+
+const { arrayOf, shape, string, func } = PropTypes
 
 const ClearIcon = (props) => {
   return (
@@ -38,6 +40,13 @@ const Steps = ({steps, removeStopOver}) => {
       </Stepper>
     </div>
   )
+}
+
+Steps.propTypes = {
+  removeStopOver: func.isRequired,
+  steps: arrayOf(shape({
+    label: string.isRequired
+  }))
 }
 
 export default Steps
